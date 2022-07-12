@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-Grey: hsl(217, 12%, 63%);
+  --Medium-Grey: hsl(216, 12%, 54%);
+  --Dark-Blue: hsl(213, 19%, 18%);
+  --Very-Dark-Blue: hsl(216, 12%, 8%);
+  --Orange: hsl(25, 97%, 53%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  font-family: "Overpass";
+}
+
+body div {
+  border-radius: 10px;
+}
+
+.container-1 {
+  max-width: 350px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  padding-bottom: 13px;
+  background-color: var(--Very-Dark-Blue);
+  color: var(--Light-Grey);
+  height: 357px;
+  z-index: 1;
+}
+
+.container-1 h1 {
+  color: var(--White);
+}
+
+.container-1 img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: var(--Dark-Blue);
+  padding: 10px;
+}
+
+.container-1.active {
+  display: none;
+}
+
+.buttons {
+  align-self: center;
+}
+
+.buttons button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  margin-right: 5px;
+  background-color: var(--Dark-Blue);
+  color: var(--Light-Grey);
+}
+
+.buttons button:hover {
+  color: white;
+  background-color: var(--Orange);
+  cursor: pointer;
+}
+
+.buttons button:focus {
+  background-color: var(--Light-Grey);
+  color: white;
+}
+
+.submit {
+  height: 42px;
+  width: 100%;
+  border-radius: 20px;
+  align-self: center;
+  border: none;
+  background-color: var(--Orange);
+  color: white;
+}
+
+.submit:hover {
+  color: var(--Orange);
+  cursor: pointer;
+  background-color: white;
+}
+
+.container-2 {
+  max-width: 320px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  background-color: var(--Very-Dark-Blue);
+  color: var(--Light-Grey);
+  justify-content: center;
+  align-items: center;
+  display: none;
+  z-index: 1;
+}
+.container-2.active {
+  display: flex;
+}
+
+.container-2 p:nth-child(2) {
+  background-color: var(--Dark-Blue);
+  border-radius: 15px;
+  padding: 5px 10px;
+  color: var(--Orange);
+}
+
+.container-2 p {
+  text-align: center;
+}
+
+.container-2 img {
+  width: 162px;
+  height: 108px;
+}
+
+.container-2 h1 {
+  color: var(--White);
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+.attribution a {
+  color: white;
+}
