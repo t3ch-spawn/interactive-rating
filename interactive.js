@@ -19,15 +19,11 @@ submitBtn.addEventListener("click", submitRate);
 overlay.addEventListener("click", () => {
   container1.classList.remove("active");
   container2.classList.remove("active");
-  for (let i = 0; i < rateBtns.length; i++) {
-    rateBtns[i].classList.remove("active");
-  }
 });
 
 // FUNCTIONALITY OF RATE BUTTONS
 for (let i = 0; i < rateBtns.length; i++) {
   rateBtns[i].addEventListener("click", () => {
     number.textContent = rateBtns[i].textContent;
-    rateBtns[i].classList.toggle("active");
   });
 }
