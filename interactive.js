@@ -14,12 +14,17 @@ function submitRate() {
   container1.classList.toggle("active");
   container2.classList.toggle("active");
 }
+
 submitBtn.addEventListener("click", submitRate);
 
 overlay.addEventListener("click", () => {
-  container1.classList.remove("active");
-  container2.classList.remove("active");
-});
+  if (container1.classList.contains("active")) {
+    submitRate();
+  }
+}); // () => {
+//   container1.classList.remove("active");
+//   container2.classList.remove("active");
+// });
 
 // FUNCTIONALITY OF RATE BUTTONS
 for (let i = 0; i < rateBtns.length; i++) {
