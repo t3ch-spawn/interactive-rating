@@ -165,7 +165,7 @@ main {
   color: var(--White);
 }
 
-.overlay {
+.overlay.active {
   position: absolute;
   height: 100%;
   width: 100%;

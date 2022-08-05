@@ -15,12 +15,16 @@ function submitRate() {
   container2.classList.toggle("active");
 }
 
-submitBtn.addEventListener("click", submitRate);
+submitBtn.addEventListener("click", () => {
+  submitRate();
+  overlay.classList.add("active");
+});
 
 overlay.addEventListener("click", () => {
   if (container1.classList.contains("active")) {
     submitRate();
   }
+  overlay.classList.remove("active");
 }); // () => {
 //   container1.classList.remove("active");
 //   container2.classList.remove("active");
